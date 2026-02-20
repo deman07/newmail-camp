@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": 5642841677,
+      "name": "Farjam",
+      "country": "England",
+      "username": "big_dawgi",
+      "startedAt": "2026-02-20T16:28:19.152Z",
+      "emailsSent": 701,
+      "isFinished": true,
+      "completedBatches": [
+        11
+      ]
+    },
+    {
+      "id": 5924752413,
+      "name": "Sara Afzal",
+      "country": "England",
+      "username": "SarahSalon2000",
+      "startedAt": "2026-02-20T17:18:13.307Z",
+      "emailsSent": 30,
+      "isFinished": false,
+      "completedBatches": [
+        11
+      ]
+    }
+  ],
+  "totalEmails": 1523
+}

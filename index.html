@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Email Generated</title>
+
+<style>
+  :root{
+    --green:#239f40;
+    --red:#da0000;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    min-height:100vh;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+    /* Iran flag background */
+    background: linear-gradient(
+      to bottom,
+      var(--green) 0%,
+      var(--green) 33.33%,
+      #ffffff 33.33%,
+      #ffffff 66.66%,
+      var(--red) 66.66%,
+      var(--red) 100%
+    );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    /* IMPORTANT for mobile: give breathing room so the card doesn't touch edges */
+    padding: clamp(14px, 4vw, 28px);
+  }
+
+  .card{
+    width: min(92vw, 720px);
+    /* keep it from getting too tall on small screens */
+    max-height: calc(100vh - 2 * clamp(14px, 4vw, 28px));
+    overflow: hidden;
+    min-height: 420px;
+
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(8px);
+    border-radius: clamp(18px, 3.5vw, 28px);
+    padding: clamp(22px, 4vw, 44px) clamp(18px, 3.5vw, 36px);
+    text-align:center;
+
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  }
+
+  .topFade{
+    /* subtle green-ish fade like your screenshot */
+    background: linear-gradient(to bottom, rgba(35,159,64,0.12), rgba(255,255,255,0));
+    margin: calc(-1 * clamp(22px, 4vw, 44px)) calc(-1 * clamp(18px, 3.5vw, 36px)) 0;
+    padding: clamp(18px, 3.5vw, 32px) 0 8px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  .lion{
+    width: clamp(72px, 16vw, 130px);
+    height: auto;
+    display:block;
+    margin: 0 auto;
+  }
+
+  .check{
+    width: clamp(56px, 12vw, 78px);
+    height: clamp(56px, 12vw, 78px);
+    background:#d5f2df;
+    border-radius:50%;
+    margin: clamp(14px, 2.8vw, 22px) auto clamp(16px, 3vw, 24px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#1f9d50;
+    font-size: clamp(22px, 5vw, 30px);
+    font-weight:700;
+  }
+
+  h1{
+    margin:0 0 10px;
+    font-size: clamp(20px, 4.8vw, 34px);
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
+
+  p{
+    margin:0 0 18px;
+    color:#555;
+    font-size: clamp(13px, 3.2vw, 17px);
+    line-height:1.35;
+  }
+
+  .handle{
+    display:inline-block;
+    margin-top: clamp(10px, 2.4vw, 18px);
+    font-size: clamp(13px, 3.2vw, 16px);
+    color:#0a58ff;
+    text-decoration:none;
+    font-weight:600;
+  }
+  .cta-btn{
+  display:inline-block;
+  margin-top: 18px;
+  padding: 12px 26px;
+  background: #0a58ff;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(14px, 3.2vw, 16px);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.cta-btn:hover{
+  background:#084cd6;
+  transform: translateY(-2px);
+}
+
+.telegram{
+  display:block;
+  margin-top: 22px;
+  font-size: clamp(13px, 3vw, 15px);
+  color:#0a58ff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+  /* Mobile-specific tightening so the card looks like your phone screenshot */
+  @media (max-width: 420px){
+    .card{ width: 94vw; }
+  }
+</style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="topFade">
+      <!-- Put your image file in the same folder and name it lion.png OR change the path -->
+      <img class="lion" src="lion.png" alt="Lion and Sun" />
+    </div>
+
+    <div class="check">✓</div>
+
+    <h1>Email Generated</h1>
+    <p>You are being redirected.</p>
+<a id="openEmail" class="cta-btn" href="#">Tap to open email</a>
+
+<a class="telegram" href="https://t.me/javid_shah_iran_bot">
+  @javid_shah_iran_bot
+</a>
+  </div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  const to = params.get("to") || "";
+  const bcc = params.get("bcc") || "";
+  const subject = params.get("sub") || "";
+  const body = params.get("body") || "";
+
+  const ua = navigator.userAgent.toLowerCase();
+  const isAndroid = ua.includes("android");
+  const isIOS = /iphone|ipad|ipod/.test(ua);
+
+  const enc = encodeURIComponent;
+
+  // Gmail App deep link (Android only)
+  const gmailAppUrl =
+    `googlegmail://co?to=${enc(to)}` +
+    (bcc ? `&bcc=${enc(bcc)}` : "") +
+    (subject ? `&subject=${enc(subject)}` : "") +
+    (body ? `&body=${enc(body)}` : "");
+
+  // Mail app
+  let mailto = `mailto:${enc(to)}`;
+  const q = [];
+  if (bcc) q.push(`bcc=${enc(bcc)}`);
+  if (subject) q.push(`subject=${enc(subject)}`);
+  if (body) q.push(`body=${enc(body)}`);
+  if (q.length) mailto += `?${q.join("&")}`;
+
+  // Gmail web (desktop only)
+  const gmailWebUrl =
+    `https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1` +
+    `&to=${enc(to)}` +
+    (bcc ? `&bcc=${enc(bcc)}` : "") +
+    `&su=${enc(subject)}` +
+    `&body=${enc(body)}`;
+
+  // Decide primary behavior
+  let primary;
+
+  if (isIOS) {
+    primary = mailto;                 // iPhone: Mail app only
+  } else if (isAndroid) {
+    primary = gmailAppUrl;            // Android: Gmail app
+  } else {
+    primary = gmailWebUrl;            // Desktop: Gmail web
+  }
+
+  // Make button match primary action
+  const btn = document.getElementById("openEmail");
+  if (btn) btn.href = primary;
+
+  // Wait 1.5 seconds before redirect
+  setTimeout(() => {
+    window.location.href = primary;
+
+    // Android fallback only (if Gmail app not installed)
+    if (isAndroid) {
+      setTimeout(() => {
+        window.location.href = mailto;
+      }, 2500);
+    }
+
+  }, 1500);
+</script>
+
+</body>
+</html>
