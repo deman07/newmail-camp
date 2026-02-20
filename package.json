@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "start": "node bot.js"
+  }
+}
+
+{
   "name": "email-bot",
   "version": "1.0.0",
   "main": "index.js",
