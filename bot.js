@@ -1027,7 +1027,8 @@ bot.on('text', ctx => {
     }
 
     ctx.reply(`✅ Setup complete, <b>${state.name}</b>!
-      Please send all batches. When you reach the final one, tap   “🏁Finish & Submit.”`, { 
+      Please send all batches. When you reach the final one,
+      tap “🏁Finish & Submit.”`, { 
         parse_mode: 'HTML',
         ...Markup.inlineKeyboard([Markup.button.callback('📧 Open first batch', 'PAGE_0')]) 
     });
@@ -1095,4 +1096,5 @@ bot.telegram.setMyCommands([
   scope: { type: 'chat', chat_id: ADMIN_ID } 
 });
 bot.launch();
+
 console.log('Bot is live and running.');
