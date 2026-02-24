@@ -276,16 +276,7 @@ bot.start((ctx) => {
     {
       caption: `⚖️ <b>TAKE A STAND FOR HUMAN RIGHTS.</b>
 
-English:
-This campaign enables you to send a formal, structured appeal to UK representatives regarding the escalating human rights crisis in Iran.
 
-Your message calls for accountability, protection of civilians, and support for democratic principles. It will be delivered in a professional diplomatic format suitable for policymakers.
-
-The process takes less than two minutes. Your participation strengthens the collective voice of the Iranian diaspora and supporters of human dignity.
-
-To personalise your letter with an official signature, please enter your details below to begin.
-
-فارسی:
 این کارزار به شما امکان می‌دهد یک نامه رسمی و ساختارمند در خصوص بحران حقوق بشر در ایران برای نمایندگان بریتانیا ارسال کنید.
 
 این پیام خواستار پاسخگویی، حمایت از غیرنظامیان و پشتیبانی از اصول دموکراتیک است و در قالبی رسمی و مناسب برای مقامات ارسال می‌شود.
