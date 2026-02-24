@@ -304,7 +304,7 @@ bot.on('text', ctx => {
     ctx.reply('🌍 Your <b>country</b>:', { parse_mode: 'HTML' });
   } else if (state.step === 'country') {
     state.country = capitalizeWords(ctx.message.text);
-    state.finalBody = EMAIL_BODY + `\n${state.name}\nFrom ${state.country}\nReference: X link showing thousands at risk as reports emerge of swift executions in Iran (https://x.com/kusha_alagband/status/2023495478462357979?s)`;
+    state.finalBody = EMAIL_BODY + `\n${state.name}\nFrom ${state.country}`;
     state.emailChunks = chunkArray(RECIPIENTS, MAX_PER_EMAIL);
     state.step = 'sending';
 
@@ -400,4 +400,5 @@ bot.telegram.setMyCommands([
 bot.launch();
 
 console.log('Bot is live and running.');
+
 
