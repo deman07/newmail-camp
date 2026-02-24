@@ -276,8 +276,6 @@ bot.start((ctx) => {
     {
       caption: `⚖️ <b>TAKE A STAND FOR HUMAN RIGHTS.</b>
 
-🕊️ Iran Advocacy Action Bot
-
 English:
 This campaign enables you to send a formal, structured appeal to UK representatives regarding the escalating human rights crisis in Iran.
 
